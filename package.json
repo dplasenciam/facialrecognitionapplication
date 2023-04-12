@@ -1,6 +1,5 @@
 {
   "name": "facialrecognitionapplication",
-  "homepage": "https://dplasenciam.github.io/facerecognitionbrain",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
