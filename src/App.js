@@ -150,7 +150,7 @@ class App extends Component {
       requestOptions
     )*/
 
-    fetch("http://localhost:3001/imageurl", {
+    fetch(`${process.env.BACKEND_URL}/imageurl`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -160,7 +160,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((result) => {
         if (result) {
-          fetch("http://localhost:3001/image", {
+          fetch(`${process.env.BACKEND_URL}/image`, {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
