@@ -150,7 +150,7 @@ class App extends Component {
       requestOptions
     )*/
 
-    fetch("https://facialrecognitionapplication.onrender.com/imageurl", {
+    fetch("https://facialrecognition-api.herokuapp.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -160,7 +160,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((result) => {
         if (result) {
-          fetch("https://facialrecognitionapplication.onrender.com/image", {
+          fetch("https://facialrecognition-api.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
